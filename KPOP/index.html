@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop 소개</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#60A5FA',
+                        accent: '#93C5FD',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'fade-in-up': 'fadeInUp 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="glass fixed w-full z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-white text-xl font-bold">World Pop Music</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-white/90">K-pop</a>
+                    <a href="american-pop.html" class="nav-link text-white hover:text-white/90">American Pop</a>
+                    <a href="british-pop.html" class="nav-link text-white hover:text-white/90">British Pop</a>
+                    <a href="j-pop.html" class="nav-link text-white hover:text-white/90">J-pop</a>
+                    <a href="latin-pop.html" class="nav-link text-white hover:text-white/90">Latin Pop</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex justify-center mb-8 fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" 
+                         alt="Korean Flag" 
+                         class="w-24 h-24 object-contain drop-shadow-lg">
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight fade-in delay-100">
+                    K-pop의 매력에 빠져보세요
+                </h1>
+                <p class="text-xl text-white/90 mb-8 fade-in delay-200">
+                    세계를 사로잡은 한국 대중음악의 새로운 세계
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Intro Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-300">
+                <h2 class="text-3xl font-bold text-white mb-6">K-pop이란?</h2>
+                <p class="text-white/90 leading-relaxed mb-6">
+                    K-pop은 한국의 대중음악을 의미하며, 1990년대 초반부터 시작된 현대적 형태의 한국 대중음악을 가리킵니다. 
+                    K-pop은 댄스, 랩, 발라드, R&B, 힙합, 록 등 다양한 음악 장르를 포함하며, 
+                    정교한 안무, 화려한 무대, 그리고 멤버들의 다양한 재능이 특징입니다. 
+                    전 세계적으로 큰 인기를 끌며, 한국 문화를 전파하는 중요한 매개체가 되었습니다.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">역사</h3>
+                        <p class="text-white/90">
+                            K-pop의 기원은 1990년대 초반으로 거슬러 올라갑니다. 서태지와 아이들이 1992년 데뷔하면서 현대적 K-pop의 기반을 마련했습니다. 
+                            1990년대 후반에는 H.O.T., 젝스키스, S.E.S., 핑클 등이 등장하며 아이돌 문화의 기반을 다졌습니다.
+                            2000년대에는 보아, 동방신기, 빅뱅, 소녀시대 등이 아시아 시장에서 성공을 거두었고, 
+                            2010년대에는 BTS, BLACKPINK, EXO, TWICE 등이 글로벌 스타로 성장하며 K-pop의 위상을 높였습니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">특징</h3>
+                        <p class="text-white/90">
+                            K-pop은 정교한 안무, 화려한 무대, 다양한 장르의 음악을 특징으로 합니다. 
+                            아이돌 그룹은 보통 4-13명의 멤버로 구성되며, 각 멤버는 댄스, 보컬, 랩 등 특정 역할을 담당합니다. 
+                            또한 K-pop은 팬덤 문화가 매우 발달해 있어 전 세계적으로 강력한 팬 커뮤니티를 형성하고 있습니다.
+                            최근에는 소셜 미디어를 활용한 팬과의 상호작용, 다양한 콘텐츠 제작, 글로벌 마케팅 전략 등이 특징입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-400">
+                <h2 class="text-3xl font-bold text-white mb-6">최신 K-pop 소식</h2>
+                <div class="space-y-6">
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">SEVENTEEN의 프로페셔널리즘</h3>
+                        <p class="text-white/90">SEVENTEEN이 일본 팬미팅에서 갑작스러운 오디오 장애에도 불구하고 완벽한 퍼포먼스를 선보이며 프로페셔널리즘을 입증했습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">NCT 팬들의 이벤트 후 혼란</h3>
+                        <p class="text-white/90">NCT 팬들이 이벤트 후 남긴 혼란으로 인해 팬 행동과 이벤트 관리에 대한 논의가 일고 있습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">KATSEYE의 Manon과 BTS J-Hope의 만남</h3>
+                        <p class="text-white/90">KATSEYE의 Manon이 BTS의 J-Hope와의 어색한 만남이 화제가 되며 팬들의 관심을 받고 있습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">4세대 아이돌의 피부색 발언</h3>
+                        <p class="text-white/90">4세대 아이돌의 피부색에 대한 의견이 주목받으며 K-pop의 미의 기준에 대한 중요한 논의가 이루어지고 있습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">HYBE 5세대 아이돌의 성형 수술 의혹</h3>
+                        <p class="text-white/90">HYBE의 새로운 연습생이 성형 수술 의혹에 휩싸이며 K-pop 산업에서 외모에 대한 지속적인 관심이 드러나고 있습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">뉴진스, 글로벌 차트 석권</h3>
+                        <p class="text-white/90">뉴진스가 최근 발매한 'Super Shy'가 빌보드 핫 100 차트에서 1위를 차지하며, K-pop 걸그룹의 새로운 역사를 썼습니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">BTS, 군복무 완료 후 재결합 준비</h3>
+                        <p class="text-white/90">BTS 멤버들이 순차적으로 군복무를 마치고 있으며, 2025년 완전체 컴백을 준비 중입니다.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">K-pop, 글로벌 음악 시장 점유율 확대</h3>
+                        <p class="text-white/90">2023년 K-pop의 글로벌 시장 점유율이 5%를 넘어섰으며, 이는 전년 대비 2% 증가한 수치입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-500">
+                <h2 class="text-3xl font-bold text-white mb-6">K-pop의 글로벌 영향력</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">문화적 영향</h3>
+                        <p class="text-white/90">
+                            K-pop은 한국어, 한국 음식, 한국 패션 등 한국 문화 전반에 대한 글로벌 관심을 불러일으켰습니다. 
+                            한류(Korean Wave)의 핵심 요소로 작용하며, 전 세계적으로 한국 문화의 인지도를 높이는 데 기여했습니다.
+                            특히 소셜 미디어를 통한 글로벌 팬덤 형성과 문화 교류는 K-pop의 특징적인 현상입니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">경제적 영향</h3>
+                        <p class="text-white/90">
+                            K-pop 산업은 연간 수조원의 경제적 가치를 창출하고 있습니다. 
+                            음반 판매, 콘서트, 굿즈 판매 등 직접적인 수익뿐만 아니라, 
+                            관광, 패션, 뷰티 등 관련 산업에도 긍정적인 영향을 미치고 있습니다.
+                            특히 디지털 음원 판매와 스트리밍 서비스의 발전은 K-pop의 글로벌 확장에 큰 역할을 했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Groups Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- BTS Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-400">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/bts.jpg" 
+                         alt="BTS" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">BTS</h3>
+                    <p class="text-white/90 mb-4">세계적인 슈퍼스타 그룹으로, 빌보드 핫 100 차트 1위, 그래미 어워드 수상 등 K-pop의 위상을 높인 그룹입니다. 글로벌 팬덤 '아미'와 함께 다양한 사회적 메시지를 전파하고 있습니다.</p>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48 rounded-lg" 
+                                src="https://www.youtube.com/embed/WMweEpGlu_U" 
+                                title="BTS 'Butter' Performance" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLACKPINK Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/blackpink.png" 
+                         alt="BLACKPINK" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">BLACKPINK</h3>
+                    <p class="text-white/90 mb-4">YG 엔터테인먼트 소속의 4인조 걸그룹으로, 유튜브 구독자 수 1억 명 돌파, 코첼라 페스티벌 헤드라이너 등 글로벌 성과를 이룬 그룹입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48 rounded-lg" 
+                                src="https://www.youtube.com/embed/2S24-y0Ij3Y" 
+                                title="BLACKPINK 'Kill This Love' Performance" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWICE Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-600">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/twice.jpg" 
+                         alt="TWICE" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">TWICE</h3>
+                    <p class="text-white/90 mb-4">JYP 엔터테인먼트 소속의 9인조 걸그룹으로, 일본 오리콘 차트 1위, 미국 빌보드 200 차트 진입 등 아시아와 글로벌에서 활약 중인 그룹입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48 rounded-lg" 
+                                src="https://www.youtube.com/embed/k6jqx9kZgPM" 
+                                title="TWICE 'Fancy' Performance" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-dark py-12 mt-20 fade-in-up delay-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <p class="text-lg text-white mb-4">© 2024 K-pop 소개 페이지</p>
+                <p class="text-white/70">All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer를 사용하여 요소가 화면에 보일 때 애니메이션 적용
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // 모든 애니메이션 요소에 observer 적용
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

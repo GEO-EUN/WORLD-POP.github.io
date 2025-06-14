@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-pop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#60A5FA',
+                        accent: '#93C5FD',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'fade-in-up': 'fadeInUp 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-900 via-red-800 to-white min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="glass fixed w-full z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-xl font-bold">World Pop Music</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-white/90">K-pop</a>
+                    <a href="american-pop.html" class="nav-link text-white hover:text-white/90">American Pop</a>
+                    <a href="british-pop.html" class="nav-link text-white hover:text-white/90">British Pop</a>
+                    <a href="j-pop.html" class="nav-link text-white hover:text-white/90">J-pop</a>
+                    <a href="latin-pop.html" class="nav-link text-white hover:text-white/90">Latin Pop</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex justify-center mb-8 fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" 
+                         alt="Japanese Flag" 
+                         class="w-24 h-24 object-contain drop-shadow-lg">
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight fade-in delay-100">
+                    J-pop Music
+                </h1>
+                <p class="text-xl text-white/90 mb-8 fade-in delay-200">
+                    The Unique Sound of Japan
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Intro Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-300">
+                <h2 class="text-3xl font-bold text-white mb-6">What is J-pop?</h2>
+                <p class="text-white/90 leading-relaxed mb-6">
+                    J-pop (Japanese pop) is a musical genre that entered the musical mainstream of Japan in the 1990s. 
+                    It is a fusion of Western pop music and traditional Japanese music, creating a unique sound that 
+                    has gained popularity both in Japan and internationally. J-pop encompasses various styles including 
+                    idol pop, rock, electronic, and R&B.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">History</h3>
+                        <p class="text-white/90">
+                            J-pop emerged in the 1990s, evolving from Japanese rock and pop music of the 1970s and 1980s. 
+                            The genre gained mainstream popularity with artists like Hikaru Utada and Ayumi Hamasaki. 
+                            Today, J-pop continues to evolve with diverse artists and groups, including idol groups 
+                            like AKB48 and solo artists like Kenshi Yonezu.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Characteristics</h3>
+                        <p class="text-white/90">
+                            J-pop is known for its catchy melodies, polished production, and often elaborate music videos. 
+                            The genre frequently incorporates elements from anime and video game music, creating a distinct 
+                            sound. J-pop artists often have strong visual identities and elaborate stage performances.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-400">
+                <h2 class="text-3xl font-bold text-white mb-6">Latest J-pop News</h2>
+                <div class="space-y-6">
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">YOASOBI's Global Success</h3>
+                        <p class="text-white/90">YOASOBI's latest single tops global charts, marking a new era for J-pop's international reach.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Perfume's New Album</h3>
+                        <p class="text-white/90">Perfume announces their upcoming album with innovative AR technology integration.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Kenshi Yonezu's Collaboration</h3>
+                        <p class="text-white/90">Kenshi Yonezu collaborates with international artists for a groundbreaking new project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-500">
+                <h2 class="text-3xl font-bold text-white mb-6">Global Impact</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Cultural Influence</h3>
+                        <p class="text-white/90">
+                            J-pop has significantly influenced global pop culture, particularly through anime and video games. 
+                            The genre has helped spread Japanese culture worldwide and has inspired artists across different 
+                            countries. J-pop's unique style continues to attract international fans.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Economic Impact</h3>
+                        <p class="text-white/90">
+                            The J-pop industry is a major contributor to Japan's entertainment sector. It generates 
+                            significant revenue through music sales, concerts, and merchandise. The industry also 
+                            supports related sectors like fashion and tourism.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- YOASOBI Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-400">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/yoasobi.jpg" 
+                         alt="YOASOBI" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">YOASOBI</h3>
+                    <p class="text-white/90">A Japanese music duo known for their unique blend of pop and electronic music.</p>
+                </div>
+            </div>
+
+            <!-- Perfume Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/perfume.jpg" 
+                         alt="Perfume" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Perfume</h3>
+                    <p class="text-white/90">A popular Japanese girl group known for their electronic pop music and synchronized dance performances.</p>
+                </div>
+            </div>
+
+            <!-- Kenshi Yonezu Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-600">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/kenshi_yonezu.jpg" 
+                         alt="Kenshi Yonezu" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Kenshi Yonezu</h3>
+                    <p class="text-white/90">A multi-talented artist known for his unique voice and creative music videos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-dark py-12 mt-20 fade-in-up delay-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <p class="text-lg text-white mb-4">© 2024 J-pop Music</p>
+                <p class="text-white/70">All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer를 사용하여 요소가 화면에 보일 때 애니메이션 적용
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // 모든 애니메이션 요소에 observer 적용
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 
