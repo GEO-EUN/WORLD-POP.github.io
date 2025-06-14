@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Pop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#60A5FA',
+                        accent: '#93C5FD',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'fade-in-up': 'fadeInUp 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-red-800 to-white min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="glass fixed w-full z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-xl font-bold">World Pop Music</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-white/90">K-pop</a>
+                    <a href="american-pop.html" class="nav-link text-white hover:text-white/90">American Pop</a>
+                    <a href="british-pop.html" class="nav-link text-white hover:text-white/90">British Pop</a>
+                    <a href="j-pop.html" class="nav-link text-white hover:text-white/90">J-pop</a>
+                    <a href="latin-pop.html" class="nav-link text-white hover:text-white/90">Latin Pop</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex justify-center mb-8 fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
+                         alt="British Flag" 
+                         class="w-24 h-24 object-contain drop-shadow-lg">
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight fade-in delay-100">
+                    British Pop Music
+                </h1>
+                <p class="text-xl text-white/90 mb-8 fade-in delay-200">
+                    From The Beatles to Modern Icons
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Intro Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-300">
+                <h2 class="text-3xl font-bold text-white mb-6">What is British Pop?</h2>
+                <p class="text-white/90 leading-relaxed mb-6">
+                    British pop music has been a major force in the global music industry since the 1960s. 
+                    From the British Invasion led by The Beatles to modern artists like Adele and Ed Sheeran, 
+                    British pop has consistently produced innovative and influential music that resonates worldwide.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">History</h3>
+                        <p class="text-white/90">
+                            British pop music's golden age began with The Beatles in the 1960s, followed by 
+                            the rise of glam rock in the 1970s with artists like David Bowie. The 1980s saw 
+                            the emergence of new wave and synth-pop, while the 1990s brought Britpop with 
+                            bands like Oasis and Blur. Today, British pop continues to evolve with diverse 
+                            artists across various genres.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Characteristics</h3>
+                        <p class="text-white/90">
+                            British pop is known for its distinctive sound, often characterized by clever 
+                            lyrics, innovative production, and a blend of traditional and modern elements. 
+                            It frequently incorporates elements from rock, electronic, and folk music, 
+                            creating a unique and recognizable style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-400">
+                <h2 class="text-3xl font-bold text-white mb-6">Latest British Pop News</h2>
+                <div class="space-y-6">
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Adele's Las Vegas Residency</h3>
+                        <p class="text-white/90">Adele announces extension of her successful Las Vegas residency with new dates.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Ed Sheeran's New Album</h3>
+                        <p class="text-white/90">Ed Sheeran releases his highly anticipated new album, breaking streaming records.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">BRIT Awards 2024</h3>
+                        <p class="text-white/90">The 2024 BRIT Awards celebrate the best of British music with record-breaking viewership.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-500">
+                <h2 class="text-3xl font-bold text-white mb-6">Global Impact</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Cultural Influence</h3>
+                        <p class="text-white/90">
+                            British pop music has significantly influenced global music culture. 
+                            From fashion trends to language, it has shaped youth culture worldwide. 
+                            The British Invasion of the 1960s revolutionized popular music and 
+                            continues to inspire artists across generations.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Economic Impact</h3>
+                        <p class="text-white/90">
+                            The British music industry is one of the largest in the world, 
+                            generating billions of pounds annually. It creates jobs in music 
+                            production, live performances, and related industries, contributing 
+                            significantly to the UK economy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- The Beatles Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-400">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/beatles.jpg" 
+                         alt="The Beatles" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">The Beatles</h3>
+                    <p class="text-white/90">The most influential band in history, revolutionizing popular music and culture.</p>
+                </div>
+            </div>
+
+            <!-- Adele Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/adele.jpg" 
+                         alt="Adele" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Adele</h3>
+                    <p class="text-white/90">One of the best-selling music artists of all time, known for her powerful vocals and emotional ballads.</p>
+                </div>
+            </div>
+
+            <!-- Ed Sheeran Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-600">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/ed_sheeran.jpg" 
+                         alt="Ed Sheeran" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Ed Sheeran</h3>
+                    <p class="text-white/90">A global superstar known for his heartfelt lyrics and innovative approach to pop music.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-dark py-12 mt-20 fade-in-up delay-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <p class="text-lg text-white mb-4">© 2024 British Pop Music</p>
+                <p class="text-white/70">All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer를 사용하여 요소가 화면에 보일 때 애니메이션 적용
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // 모든 애니메이션 요소에 observer 적용
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

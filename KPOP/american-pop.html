@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Pop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#60A5FA',
+                        accent: '#93C5FD',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'fade-in-up': 'fadeInUp 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-900 via-red-800 to-blue-900 min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="glass fixed w-full z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-xl font-bold">World Pop Music</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-white/90">K-pop</a>
+                    <a href="american-pop.html" class="nav-link text-white hover:text-white/90">American Pop</a>
+                    <a href="british-pop.html" class="nav-link text-white hover:text-white/90">British Pop</a>
+                    <a href="j-pop.html" class="nav-link text-white hover:text-white/90">J-pop</a>
+                    <a href="latin-pop.html" class="nav-link text-white hover:text-white/90">Latin Pop</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex justify-center mb-8 fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" 
+                         alt="American Flag" 
+                         class="w-24 h-24 object-contain drop-shadow-lg">
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight fade-in delay-100">
+                    American Pop Music
+                </h1>
+                <p class="text-xl text-white/90 mb-8 fade-in delay-200">
+                    The Global Leader in Popular Music
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Intro Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-300">
+                <h2 class="text-3xl font-bold text-white mb-6">What is American Pop?</h2>
+                <p class="text-white/90 leading-relaxed mb-6">
+                    American pop music is a genre of popular music that originated in the United States. 
+                    It has evolved over the decades, incorporating elements from various musical styles 
+                    including rock, R&B, hip-hop, and electronic music. American pop music has had a 
+                    significant influence on global music culture and continues to shape trends worldwide.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">History</h3>
+                        <p class="text-white/90">
+                            American pop music has its roots in the early 20th century, evolving from jazz and blues. 
+                            The 1950s saw the rise of rock and roll with artists like Elvis Presley. 
+                            The 1960s brought the British Invasion and the rise of Motown. 
+                            The 1980s and 1990s saw the emergence of pop icons like Michael Jackson and Madonna. 
+                            Today, American pop continues to evolve with artists like Taylor Swift and Beyoncé.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Characteristics</h3>
+                        <p class="text-white/90">
+                            American pop music is known for its catchy melodies, relatable lyrics, and polished production. 
+                            It often incorporates elements from other genres and is heavily influenced by current trends. 
+                            The genre is characterized by its accessibility and mass appeal, making it popular across 
+                            different age groups and cultures worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-400">
+                <h2 class="text-3xl font-bold text-white mb-6">Latest American Pop News</h2>
+                <div class="space-y-6">
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Taylor Swift's New Album</h3>
+                        <p class="text-white/90">Taylor Swift announces her upcoming album with a surprise release date and new single.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Beyoncé's World Tour</h3>
+                        <p class="text-white/90">Beyoncé's Renaissance World Tour breaks records with highest-grossing tour by a female artist.</p>
+                    </div>
+                    <div class="border-b border-white/20 pb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Billboard Music Awards</h3>
+                        <p class="text-white/90">The 2023 Billboard Music Awards celebrate the biggest names in American pop music.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <div class="glass rounded-2xl p-8 transform transition-all hover:shadow-xl fade-in-up delay-500">
+                <h2 class="text-3xl font-bold text-white mb-6">Global Impact</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Cultural Influence</h3>
+                        <p class="text-white/90">
+                            American pop music has significantly influenced global music culture. 
+                            It has shaped fashion trends, dance styles, and even language worldwide. 
+                            The genre's influence extends beyond music, impacting film, television, and digital media.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Economic Impact</h3>
+                        <p class="text-white/90">
+                            The American pop music industry generates billions of dollars annually. 
+                            It creates jobs in music production, distribution, and live performances. 
+                            The industry also drives tourism and contributes to the growth of related sectors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Taylor Swift Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-400">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/taylor_swift.jpg" 
+                         alt="Taylor Swift" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Taylor Swift</h3>
+                    <p class="text-white/90">One of the most successful artists of all time, known for her songwriting and storytelling abilities.</p>
+                </div>
+            </div>
+
+            <!-- Beyoncé Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/beyonce.jpg" 
+                         alt="Beyoncé" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Beyoncé</h3>
+                    <p class="text-white/90">A global icon known for her powerful vocals, innovative performances, and cultural impact.</p>
+                </div>
+            </div>
+
+            <!-- Bruno Mars Card -->
+            <div class="group glass rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl fade-in-up delay-600">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="images/bruno_mars.jpg" 
+                         alt="Bruno Mars" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Bruno Mars</h3>
+                    <p class="text-white/90">Known for his retro style and versatile musical abilities across multiple genres.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-dark py-12 mt-20 fade-in-up delay-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <p class="text-lg text-white mb-4">© 2024 American Pop Music</p>
+                <p class="text-white/70">All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer를 사용하여 요소가 화면에 보일 때 애니메이션 적용
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // 모든 애니메이션 요소에 observer 적용
+        document.querySelectorAll('.fade-in, .fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 
